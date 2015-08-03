@@ -1,0 +1,33 @@
+{
+  "build": "./src/build/",
+  "templates": "./src/app/modules/**/*.html",
+  "css": [
+    "./src/assets/vendor/html5-boilerplate/dist/css/normalize.css",
+    "./src/assets/vendor/html5-boilerplate/dist/css/main.css",
+    "./src/assets/stylesheets/app.css"
+  ],
+  "js": [
+    "./src/assets/vendor/angular/angular.js",
+    "./src/assets/vendor/angular-route/angular-route.js",
+    "./src/assets/vendor/angular-sanitize/angular-sanitize.js",
+    "./src/app/components/*.directive.js",
+    "./src/app/services/*.service.js",
+    "./src/app/core/core.module.js",
+    "./src/app/core/core.config.js",
+    "./src/app/core/core.route.js",
+    "./src/app/modules/**/*.module.js",
+    "./src/app/modules/**/*.config.js",
+    "./src/app/modules/**/*.route.js",
+    "./src/app/modules/**/*.controller.js",
+    "./src/app/app.module.js",
+    "./src/app/app.config.js"
+  ],
+  "jscs": [
+    "./src/app/**/*.js",
+    "./tests/**/*.js"
+  ],
+  "jslint": [
+    "./src/app/**/*.js",
+    "./tests/**/*.js"
+  ]
+}

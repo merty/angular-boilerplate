@@ -1,0 +1,16 @@
+{
+  "name": "angular-boilerplate",
+  "description": "An opinionated boilerplate project for AngularJS applications.",
+  "version": "0.0.0",
+  "homepage": "https://github.com/merty/angular-boilerplate",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.4.1",
+    "angular-route": "1.4.1",
+    "angular-loader": "1.4.1",
+    "angular-mocks": "1.4.1",
+    "angular-sanitize": "1.4.1",
+    "html5-boilerplate": "~5.2.0"
+  }
+}
