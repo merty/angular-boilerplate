@@ -151,6 +151,29 @@ tests/e2e/                             # Under the directory for end-to-end test
 └── home.scenario.js                   # Test file, named as "<module>.scenario.js"
 ```
 
+## Extras
+
+This project comes with JSCS and JSHint pre-configured for you. You may make changes on them to your taste by editing `.jscsrc` and `.jshintrc` in the root directory. These tasks run each time you run `npm run-script build`, as a part of the `build` task defined in `Gulpfile.js`. You might as well run the build sequence manually:
+
+```
+$ npm run gulp build
+```
+
+...or just run the JS build steps which include running JSCS and JSHint tasks:
+
+```
+$ npm run gulp js
+```
+
+...or simply just run JSCS and JSHint to ensure the overall code quality:
+
+```
+$ npm run gulp jscs
+$ npm run gulp jshint
+```
+
+If you have `gulp` installed globally, you may omit `npm run` in the commands listed above.
+
 ## Author
 
 Mert Yazicioglu - [Website](https://www.mertyazicioglu.com) &middot; [GitHub](https://github.com/merty) &middot; [Twitter](https://twitter.com/_mert)

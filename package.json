@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build": "gulp build",
+    "gulp": "gulp",
     "postinstall": "bower install",
     "start": "cd src;python -m SimpleHTTPServer",
     "update-webdriver": "webdriver-manager update --standalone",

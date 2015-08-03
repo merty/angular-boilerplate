@@ -29,14 +29,14 @@ gulp.task('jscs', function () {
   .pipe(jscs())
 });
 
-gulp.task('jslint', function () {
-  return gulp.src(config.jslint)
+gulp.task('jshint', function () {
+  return gulp.src(config.jshint)
   .pipe(jshint('.jshintrc'))
   .pipe(jshint.reporter('jshint-stylish'))
   .pipe(jshint.reporter('fail'));
 });
 
-gulp.task('js', ['jscs', 'jslint'], function () {
+gulp.task('js', ['jscs', 'jshint'], function () {
   return gulp.src(config.js)
   .pipe(plugins.concat('main.min.js'))
   .pipe(plugins.ngAnnotate({

@@ -26,7 +26,7 @@
     "./src/app/**/*.js",
     "./tests/**/*.js"
   ],
-  "jslint": [
+  "jshint": [
     "./src/app/**/*.js",
     "./tests/**/*.js"
   ]
