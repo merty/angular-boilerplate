@@ -3,9 +3,9 @@
 
   angular.module('app.core').config(CoreRoute);
 
-  CoreRoute.$inject = ['$routeProvider'];
+  CoreRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function CoreRoute($routeProvider) {
-    $routeProvider.otherwise({redirectTo: '/'});
+  function CoreRoute($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
   }
 })();

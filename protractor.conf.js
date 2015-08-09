@@ -1,3 +1,5 @@
+'use strict';
+
 var phantomjs = require('phantomjs');
 
 exports.config = {
@@ -16,6 +18,6 @@ exports.config = {
     }
   },
   specs: [
-  './tests/e2e/*.js'
+    './tests/e2e/*.js'
   ]
 };

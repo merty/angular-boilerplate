@@ -11,8 +11,9 @@ beforeEach(function () {
 });
 
 describe('Application', function () {
-  it('home page should greet', function () {
+  it('home page should greet', function (done) {
     var heading = element(by.css('h1'));
     chai.expect(heading.getText()).to.eventually.equal('Hello World!');
+    done();
   });
 });

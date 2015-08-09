@@ -21,28 +21,31 @@ Install the packages from NPM and Bower repositories:
 $ npm install
 ```
 
-Combine and minify CSS and JS files using Gulp:
+Perform the build operations using Gulp:
 
 ```
-$ npm run-script build
+$ npm run build       # Builds for production
+$ npm run build-dev   # Builds for development
 ```
 
-Serve the application using Python's SimpleHTTPServer: *(use for development purposes only!)*
+Serve the application using Browsersync: *(for development purposes)*
 
 ```
-$ npm start > /dev/null &
+$ npm run-start       # Serves the production build
+$ npm run-start-dev   # Serves the development build
 ```
 
 Run unit tests using Karma:
 
 ```
-$ npm run-script test-unit
+$ npm run test-unit
 ```
 
 Run end-to-end tests using Protractor:
 
 ```
-$ npm run-script test-e2e
+$ npm run start-test  # Start a web server for testing
+$ npm run test-e2e    # Run the tests
 ```
 
 ## Directory Structure
@@ -54,7 +57,6 @@ The root directory is composed of directories `src` and `tests`, as well as conf
 `tests` directory contains integration-testing-related files. It comes with an `e2e` directory by default where you can place your end-to-end testing files.
 
 The rest of the files are either to configure the development environment or to handle various deployment processes.
-
 
 ```
 .
@@ -153,26 +155,50 @@ tests/e2e/                             # Under the directory for end-to-end test
 
 ## Extras
 
-This project comes with JSCS and JSHint pre-configured for you. You may make changes on them to your taste by editing `.jscsrc` and `.jshintrc` in the root directory. These tasks run each time you run `npm run-script build`, as a part of the `build` task defined in `Gulpfile.js`. You might as well run the build sequence manually:
+This project comes with JSCS and JSHint pre-configured for you. You may make changes on them to your taste by editing `.jscsrc` and `.jshintrc` in the root directory. These tasks run each time you run `npm run build`, as a part of the `build` task defined in `Gulpfile.js`.
+
+You can also run the build sequence manually:
 
 ```
 $ npm run gulp build
 ```
 
-...or just run the JS build steps which include running JSCS and JSHint tasks:
+...or maybe build for development purposes:
+
+```
+$ npm run gulp build:dev
+```
+
+...or just run the JS task which also runs js:style, js:lint and js:deps tasks:
 
 ```
 $ npm run gulp js
 ```
 
-...or simply just run JSCS and JSHint to ensure the overall code quality:
+...or simply just run JSCS and JSHint:
 
 ```
-$ npm run gulp jscs
-$ npm run gulp jshint
+$ npm run gulp js:style
+$ npm run gulp js:lint
 ```
 
-If you have `gulp` installed globally, you may omit `npm run` in the commands listed above.
+If you have `gulp` installed globally, you may omit `npm run` in the commands listed above. For other Gulp tasks, please take a look at `gulpfile.js`.
+
+## Changelog
+
+**0.2.0**
+
+* ngRoute is replaced with UI Router
+* CSS and JS bundles are now automatically injected into the HTML file
+* Bower assets are now automatically added to the bundles
+* HTML files are now compiled and cached using $templateCache
+* Integrated Browsersync to make development easier
+* Added JS files in the root directory to the linting
+* All gulp plugins are now used via gulp-load-plugins
+
+**0.1.0**
+
+* Initial release.
 
 ## Author
 

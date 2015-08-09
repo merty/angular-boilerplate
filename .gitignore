@@ -1,5 +1,7 @@
 .DS_Store
-src/assets/vendor/
-src/build/
 node_modules/
 npm-debug.log
+src/assets/vendor/
+src/build/
+src/index.html
+src/index-dev.html

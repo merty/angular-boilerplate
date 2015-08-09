@@ -3,14 +3,14 @@
 
   angular.module('app.home').config(HomeRoute);
 
-  HomeRoute.$inject = ['$routeProvider'];
+  HomeRoute.$inject = ['$stateProvider', '$urlRouterProvider'];
 
-  function HomeRoute($routeProvider) {
-    $routeProvider.when('/', {
-      templateUrl: 'app/modules/home/home.html',
+  function HomeRoute($stateProvider, $urlRouterProvider) {
+    $stateProvider.state('home', {
       controller: 'Home',
       controllerAs: 'vm',
-      title: 'Home'
+      templateUrl: 'app/modules/home/home.html',
+      url: '/'
     });
   }
 })();

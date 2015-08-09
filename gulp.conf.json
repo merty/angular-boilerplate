@@ -1,33 +1,57 @@
 {
-  "build": "./src/build/",
-  "templates": "./src/app/modules/**/*.html",
-  "css": [
-    "./src/assets/vendor/html5-boilerplate/dist/css/normalize.css",
-    "./src/assets/vendor/html5-boilerplate/dist/css/main.css",
-    "./src/assets/stylesheets/app.css"
-  ],
-  "js": [
-    "./src/assets/vendor/angular/angular.js",
-    "./src/assets/vendor/angular-route/angular-route.js",
-    "./src/assets/vendor/angular-sanitize/angular-sanitize.js",
-    "./src/app/components/*.directive.js",
-    "./src/app/services/*.service.js",
-    "./src/app/core/core.module.js",
-    "./src/app/core/core.config.js",
-    "./src/app/core/core.route.js",
-    "./src/app/modules/**/*.module.js",
-    "./src/app/modules/**/*.config.js",
-    "./src/app/modules/**/*.route.js",
-    "./src/app/modules/**/*.controller.js",
-    "./src/app/app.module.js",
-    "./src/app/app.config.js"
-  ],
-  "jscs": [
-    "./src/app/**/*.js",
-    "./tests/**/*.js"
-  ],
-  "jshint": [
-    "./src/app/**/*.js",
-    "./tests/**/*.js"
-  ]
+  "path": {
+    "app": "./src/app/",
+    "build": "./src/build/",
+    "src": "./src/",
+    "tests": "./tests/"
+  },
+  "css": {
+    "bundle": "app.min.css",
+    "files": [
+      "assets/stylesheets/app.css"
+    ]
+  },
+  "html": {
+    "bundle": "templates.min.js",
+    "files": "modules/**/*.html",
+    "index": {
+      "dev": "index-dev.html",
+      "prod": "index.html",
+      "tpl": "index.tpl"
+    }
+  },
+  "js": {
+    "bundle": "app.min.js",
+    "files": [
+      "**/*.js",
+      "!**/*.spec.js"
+    ],
+    "vendor": {
+      "bundle": "dependencies.min.js"
+    }
+  },
+  "jscs": {
+    "files": [
+      "src/app/**/*.js",
+      "tests/**/*.js"
+    ]
+  },
+  "jshint": {
+    "config": ".jshintrc",
+    "files": [
+      "src/app/**/*.js",
+      "tests/**/*.js",
+      "*.js"
+    ]
+  },
+  "test": {
+    "specs": "**/*.spec.js",
+    "vendor": {
+      "bundle": "dependencies-test.min.js",
+      "packages": [
+        "angular-loader",
+        "angular-mocks"
+      ]
+    }
+  }
 }
