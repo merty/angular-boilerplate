@@ -70,7 +70,7 @@
     "protractor": "protractor",
     "start": "gulp serve",
     "start-dev": "gulp serve:dev",
-    "start-test": "http-server ./src -a localhost -p 8000",
+    "start-test": "http-server ./src -a localhost -p 8000 &",
     "update-webdriver": "webdriver-manager update --standalone",
     "pretest-e2e": "npm run build-test;npm run start-test;npm run update-webdriver",
     "pretest-unit": "npm run build-test",
