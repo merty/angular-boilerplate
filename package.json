@@ -17,7 +17,7 @@
     "boilerplate"
   ],
   "license": "MIT",
-  "private": false,
+  "private": true,
   "repository": "https://github.com/merty/angular-boilerplate",
   "version": "0.2.0",
   "devDependencies": {

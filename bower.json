@@ -1,9 +1,12 @@
 {
   "name": "angular-boilerplate",
   "description": "An opinionated boilerplate project for AngularJS applications, crafted with best practices in mind.",
+  "authors": [
+    "Mert Yazicioglu <mert@mertyazicioglu.com>"
+  ],
   "homepage": "https://github.com/merty/angular-boilerplate",
   "license": "MIT",
-  "private": false,
+  "private": true,
   "version": "0.2.0",
   "dependencies": {
     "angular": "1.4.1",

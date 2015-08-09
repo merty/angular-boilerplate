@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/merty/angular-boilerplate.svg?branch=master)](https://travis-ci.org/merty/angular-boilerplate)
 [![Code Climate](https://codeclimate.com/github/merty/angular-boilerplate/badges/gpa.svg)](https://codeclimate.com/github/merty/angular-boilerplate)
+[![devDependency Status](https://david-dm.org/merty/angular-boilerplate/dev-status.svg)](https://david-dm.org/merty/angular-boilerplate#info=devDependencies)
 
 An opinionated boilerplate project for AngularJS applications, crafted with best practices in mind.
 
