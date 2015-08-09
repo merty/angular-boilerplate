@@ -51,7 +51,7 @@
     "jshint-stylish": "^2.0.1",
     "karma": "^0.13.8",
     "karma-chai": "^0.1.0",
-    "karma-mocha": "^0.1.10",
+    "karma-mocha": "^0.2.0",
     "karma-phantomjs-launcher": "^0.2.0",
     "main-bower-files": "^2.9.0",
     "mocha": "^2.2.5",
