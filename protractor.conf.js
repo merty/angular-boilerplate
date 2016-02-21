@@ -1,6 +1,6 @@
 'use strict';
 
-var phantomjs = require('phantomjs');
+var phantomjs = require('phantomjs-prebuilt');
 
 exports.config = {
   baseUrl: 'http://localhost:8000/',

@@ -4,7 +4,7 @@ var config = require('./gulp.conf.json');
 var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 
-var autoprefixer = require('autoprefixer-core');
+var autoprefixer = require('autoprefixer');
 var browserSync = require('browser-sync');
 var del = require('del');
 var mainBowerFiles = require('main-bower-files');
@@ -19,7 +19,7 @@ gulp.task('css', function () {
   .pipe(plugins.concat(config.css.bundle))
   .pipe(plugins.sourcemaps.init())
   .pipe(plugins.postcss([autoprefixer({browsers: ['last 2 version']})]))
-  .pipe(plugins.minifyCss({keepSpecialComments: 0}))
+  .pipe(plugins.cssnano({keepSpecialComments: 0}))
   .pipe(plugins.sourcemaps.write())
   .pipe(gulp.dest(config.path.build));
 });
@@ -32,7 +32,7 @@ gulp.task('html:lint', function () {
 
 gulp.task('html', ['html:lint'], function () {
   return gulp.src(getPath('app', config.html.files))
-  .pipe(plugins.minifyHtml({empty: true, spare: true, quotes: true}))
+  .pipe(plugins.htmlmin({empty: true, spare: true, quotes: true}))
   .pipe(plugins.angularTemplatecache({
     root: 'app/modules'
   }))
