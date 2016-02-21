@@ -187,6 +187,10 @@ If you have `gulp` installed globally, you may omit `npm run` in the commands li
 
 ## Changelog
 
+**0.3.0**
+
+* Updated dependencies
+
 **0.2.0**
 
 * ngRoute is replaced with UI Router
