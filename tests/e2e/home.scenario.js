@@ -12,8 +12,8 @@ describe('Application', function () {
   });
 
   it('home page should greet', function (done) {
-    var heading = element(by.css('h1'));
-    chai.expect(heading.getText()).to.eventually.equal('Hello World!');
+    var heading = element(by.css('h1')).getText();
+    chai.expect(heading).to.eventually.equal('Hello World!');
     done();
   });
 });
